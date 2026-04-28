@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Kalam } from 'next/font/google';
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
+const marathi = Kalam({
+  subsets: ['latin', 'devanagari'], // ✅ correct
+  weight: ['400', '700'],           // ❗ Kalam supports 300, 400, 700 (NOT 600)
+});
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
