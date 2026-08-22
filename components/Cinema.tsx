@@ -1,24 +1,21 @@
-import Image from "next/image";
-
 export default function Cinema() {
     return (
         <>
             {/* Full Screen Video Section */}
             <section className="relative h-[60svh] sm:h-[75svh] md:h-screen w-full overflow-hidden">
-                <Image
-                    src="/images/hero1.jpeg"
-                    alt="Wedding"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    priority
-                />
-
-                {/* Dark overlay for text legibility */}
-                <div className="absolute inset-0 bg-black/40" />
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                >
+                    <source src="/videos/cinema.mp4" type="video/mp4" />
+                </video>
 
                 {/* Centered Text */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                {/* <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3">
                     <p
                         className="text-white/60 tracking-[0.3em] text-[10px] sm:text-xs md:tracking-[0.4em] md:text-sm uppercase font-light"
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -39,10 +36,10 @@ export default function Cinema() {
                         CINEMA
                     </h1>
                     <div className="w-24 h-px bg-white/40 mt-2" />
-                </div>
+                </div> */}
 
                 {/* Scroll hint */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
                     <span
                         className="text-xs tracking-widest uppercase"
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}

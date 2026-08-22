@@ -3,28 +3,28 @@ import Link from "next/link";
 
 const couples = [
     {
-        image: "/images/galleryph1.png",
-        name: "Reva & Zach",
+        image: "/images/pratiksha/DSC07791 2.jpg",
+        name: "Pratiksha",
         date: "Oct 7, 2024",
-        slug: "reva-and-zach",
+        slug: "pratiksha",
     },
     {
-        image: "/images/galleryph2.png",
-        name: "Priya & Arjun",
+        image: "/images/ganeshdimple/DSC08076.jpg",
+        name: "Ganesh & Dimple",
         date: "Aug 25, 2024",
-        slug: "priya-and-arjun",
+        slug: "ganesh-dimple",
     },
     {
-        image: "/images/galleryph3.png",
-        name: "Alia & Ranbir, Mumbai",
+        image: "/images/paraggauri/IMG_1113_TIF.jpg",
+        name: "Parag & Gauri",
         date: "Aug 8, 2024",
-        slug: "alia-and-ranbir",
+        slug: "parag-gauri",
     },
     {
-        image: "/images/galleryph4.png",
-        name: "Kiara & Siddharth",
+        image: "/images/suyansh/IMG_8292.JPG",
+        name: "Suyansh",
         date: "Apr 24, 2024",
-        slug: "kiara-and-siddharth",
+        slug: "suyansh",
     },
 ];
 
@@ -74,11 +74,11 @@ export default function CouplesGrid() {
                         </Link>
                         <div className="flex flex-col gap-0.5">
                             <Link href={`/couples/${couple.slug}`}>
-                                <p className="text-gray-900 font-semibold text-base font-serif hover:text-red-400 transition-colors cursor-pointer">
+                                <p className="text-gray-900 font-playfair font-bold  text-[20px] hover:text-red-400 transition-colors cursor-pointer">
                                     {couple.name}
                                 </p>
                             </Link>
-                            <p className="text-gray-500 text-sm">{couple.date}</p>
+                            <p className="text-gray-500 text-[12px] font-manrope">{couple.date}</p>
                         </div>
                     </div>
                 ))}

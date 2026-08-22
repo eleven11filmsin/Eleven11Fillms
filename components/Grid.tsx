@@ -1,21 +1,21 @@
 import Image from "next/image";
 
 const images = [
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
-    "/images/galleryph4.png",
+    "/images/DSC04779.jpg",
+    "/images/suyansh/IMG_8292.JPG",
+    "/images/DSC02347.jpg",
+    "/images/paraggauri/DSC01498 2.jpg",
+    "/images/DSC03740.jpg",
+    "/images/ganeshdimple/DSC09285.jpg",
+    "/images/pratiksha/DSC07851 2.jpg",
+    "/images/IMG_6514.JPG",
+    "/images/pratiksha/DSC07769.jpg",
+    "/images/ganeshdimple/DSC09303.jpg",
+    "/images/DSC03256.jpg",
+    "/images/suyansh/IMG_8461.JPG",
+    "/images/DSC02333.jpg",
+    "/images/suyansh/IMG_8494.JPG",
+    "/images/DSC04701.jpg",
 ];
 
 export default function Grid() {

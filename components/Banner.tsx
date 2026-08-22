@@ -41,15 +41,15 @@ export default function Banner() {
                 </div>
 
                 {/* Paragraphs */}
-                <div className="flex flex-col gap-5 font-serif">
-                    <p className="text-gray-800 text-[15px] leading-relaxed font-semibold">
+                <div className="flex flex-col gap-5 font-manrope">
+                    <p className="text-gray-800 text-[15px] leading-relaxed font-normal tracking-wider">
                         Considered to be the epitome of Modern Photography and Filmmaking,
                         Eleven11 Films has transformed the Indian Wedding landscape on a regular basis.
                         For almost a decade we have been creating photographs and films
                         which are timeless and have been etched in memories of thousands of
                         people forever.
                     </p>
-                    <p className="text-gray-800 text-[15px] leading-relaxed font-semibold">
+                    <p className="text-gray-800 text-[15px] leading-relaxed font-normal tracking-wider">
                         Awarded as the Wedding Filmmaker of the year for four consecutive years,
                         Eleven11 Films is committed to capturing your story with elegance, emotion,
                         and authenticity — every single frame.
@@ -72,15 +72,15 @@ export default function Banner() {
                 </div>
 
                 {/* Center Text */}
-                <div className="flex flex-col gap-5 w-[33%] -mt-31 font-serif self-center -translate-x-3" style={{ marginLeft: "10px" }}>
-                    <p className="text-gray-800 text-[12px] leading-relaxed font-semibold">
+                <div className="flex flex-col gap-5 w-[33%] -mt-31 font-manrope self-center -translate-x-3" style={{ marginLeft: "10px" }}>
+                    <p className="text-gray-800 text-[12px] leading-relaxed font-normal tracking-wider">
                         Considered to be the epitome of Modern Photography and Filmmaking,
                         Eleven11 Films has transformed the Indian Wedding landscape on a regular basis.
                         For almost a decade we have been creating photographs and films
                         which are timeless and have been etched in memories of thousands of
                         people forever.
                     </p>
-                    <p className="text-gray-800 text-[12px] leading-relaxed font-semibold">
+                    <p className="text-gray-800 text-[12px] leading-relaxed font-normal tracking-wider">
                         Awarded as the Wedding Filmmaker of the year for four consecutive years,
                         Eleven11 Films is committed to capturing your story with elegance, emotion,
                         and authenticity — every single frame.
