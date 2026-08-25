@@ -39,15 +39,15 @@ export default function Cinema() {
                 </div> */}
 
                 {/* Scroll hint */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
+                {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
                     <span
-                        className="text-xs tracking-widest uppercase"
-                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        className="text-xs tracking-widest italic"
+                        style={{ fontFamily: "manrope" }}
                     >
-                        scroll
+                        Capturing what you have always wished for.
                     </span>
-                    <div className="w-px h-8 bg-white/30 animate-pulse" />
-                </div>
+                    
+                </div> */}
             </section>
         </>
     );

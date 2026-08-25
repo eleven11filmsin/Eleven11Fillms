@@ -165,13 +165,14 @@ const CoupleCard = ({
     };
 
     return (
-        <div className="block group relative w-full overflow-hidden" style={{ height: "390px" }}>
+        <div className="block group relative w-full overflow-hidden aspect-video" >
 
             {isPlaying ? (
                 <>
                     <div className="absolute inset-0 w-full h-full [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:!w-full [&>iframe]:!h-full">
                         <div id={containerId} className="w-full h-full" />
                     </div>
+
                     <button
                         type="button"
                         onClick={handleStop}
@@ -264,21 +265,20 @@ export default function Videogallery() {
     const [playingSlug, setPlayingSlug] = useState<string | null>(null);
 
     return (
-        <section className="min-h-screen bg-[#f0ebe3] py-16 px-4">
+        <section className="min-h-screen bg-[#f0ebe3] pt-10 pb-16 px-4">
 
             {/* Intro Text */}
             <div className="max-w-3xl mx-auto text-center mb-14 px-4">
                 <p className="text-gray-800  font-manrope text-[14px] leading-relaxed ">
-                    We at HOTC celebrate the wild ones, the rule breakers, the travellers, the new age modern
-                    couple who are not afraid to experiment. We believe the ultimate goal of a wedding
-                    photographer is to justify the vibe of the wedding and the personalities of the couple.
-                    And this approach has helped us experience weddings in a two bedroom apartments to
-                    weddings spread over 2 continents.
+                    We’re drawn to couples who bring a little bit of themselves into everything they do. The way they celebrate, the people they surround themselves with, the traditions they keep, and the ones they choose to make their own.
+                    Because a wedding shouldn’t feel like a version of someone else’s. It should feel like the two of you, surrounded by the people who matter most.
+                    Here are a few of the celebrations we’ve had the privilege of being a part of.
                 </p>
-                <p className="text-gray-800 font-manrope text-[14px] leading-relaxed mt-6">
-                    Here are some selected weddings from past couple of years to showcase the union of two
-                    people in the most authentic way possible.
+                <p className="text-gray-800  font-manrope text-[14px] leading-relaxed ">
+                    
+                    Here are a few of the celebrations we’ve had the privilege of being a part of.
                 </p>
+                
             </div>
 
             {/* ── Responsive grid: 1 column on mobile, 2 on desktop ── */}

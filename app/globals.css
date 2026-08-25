@@ -120,3 +120,24 @@ body {
   font-style: italic;
   font-display: swap;
 }
+
+
+/* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+/* @media (pointer: fine) {
+
+  html,
+  body {
+    cursor: url("/images/cursor2.png") 16 16, auto;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: url("/images/cursor2.png") 16 16, pointer;
+  }
+} */
