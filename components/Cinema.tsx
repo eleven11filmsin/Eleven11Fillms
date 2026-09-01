@@ -1,8 +1,22 @@
 export default function Cinema() {
     return (
         <>
-            {/* Full Screen Video Section */}
-            <section className="relative h-[60svh] sm:h-[75svh] md:h-screen w-full overflow-hidden">
+            {/* ── MOBILE: natural-height video, full frame visible, top-aligned ── */}
+            <div className="block md:hidden w-full">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="block w-full h-auto aspect-[4/5] object-contain"
+                >
+                    <source src="/videos/cinemamobile.mp4" type="video/mp4" />
+                </video>
+            </div>
+
+            {/* ── DESKTOP / TABLET: existing full-screen behavior, unchanged ── */}
+            <section className="hidden md:block relative md:h-screen w-full overflow-hidden">
                 <video
                     autoPlay
                     muted

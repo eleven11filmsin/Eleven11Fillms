@@ -4,12 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
 
 const socialLinks = [
-    { href: "https://www.instagram.com/eleven11films/", src: "/images/instagram.png", label: "Instagram" },
-    { href: "https://youtube.com", src: "/images/youtube.png", label: "YouTube" },
-    { href: "https://www.facebook.com/profile.php?id=61567440545491", src: "/images/facebook.png", label: "Facebook" },
-    { href: "https://vimeo.com/eleven11films?fl=pp&fe=sh", src: "/images/vimeo.png", label: "Vimeo" },
+    {
+        href: "https://www.instagram.com/eleven11films/",
+        src: "/instagram.png",
+        label: "Instagram",
+    },
+    {
+        href: "https://www.youtube.com/@Eleven11_film",
+        src: "/youtube.png",
+        label: "YouTube",
+    },
+    {
+        href: "https://www.facebook.com/profile.php?id=61567440545491",
+        src: "/facebook.png",
+        label: "Facebook",
+    },
 ];
 
 export default function ContactPage() {
@@ -76,134 +88,120 @@ export default function ContactPage() {
         <main className="min-h-screen bg-[#f0ebe3] flex flex-col">
 
             {/* ── HERO with nav overlay ── */}
-            <section className="relative h-[100svh] w-full overflow-hidden">
-                <Image
-                    src="/images/hero1.jpeg"
-                    alt="Wedding hero"
-                    fill
-                    sizes="100vw"
-                    className="object-cover object-center"
-                    priority
-                />
+            <section className="relative w-full h-auto md:h-[100svh] overflow-hidden">
+
+                {/* ── MOBILE HERO VIDEO (4:5, top-aligned, uncropped) ── */}
+                <video
+                    className="md:hidden block  w-full h-auto"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                >
+                    <source src="/videos/getintouchmobile.mp4" type="video/mp4" />
+                </video>
+
+                {/* ── DESKTOP / TABLET HERO VIDEO (covers hero area) ── */}
+                <video
+                    className="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                >
+                    <source src="/videos/getintouch.mp4" type="video/mp4" />
+                </video>
 
                 {/* ── MOBILE NAVBAR ── */}
                 <nav className="flex md:hidden absolute top-0 left-0 w-full items-center justify-between px-4 sm:px-6 py-4 sm:py-5 z-20">
-                    <Link href="/">
-                        <h1 className="text-base sm:text-lg text-red-400 font-semibold tracking-wide font-serif drop-shadow-md">
-                            ELEVEN11 FILMS
-                        </h1>
+                    <Link href="/" className="flex items-center shrink-0">
+                        <Image
+                            src="/images/Eleven11filmsred.png"
+                            alt="Eleven11 Films"
+                            width={390}
+                            height={95}
+                            className="h-[50px] sm:h-[60px] w-auto max-w-[160px] sm:max-w-[190px] object-contain drop-shadow-md"
+                            priority
+                        />
                     </Link>
                     <button
                         onClick={() => setMenuOpen(true)}
                         aria-label="Open menu"
-                        className="w-8 h-8 flex items-center justify-center"
+                        className="w-10 h-10 flex items-center justify-center shrink-0"
                     >
                         <Image
                             src="/images/menu.png"
                             alt="Open menu"
-                            width={28}
-                            height={28}
-                            className="object-contain drop-shadow-md"
+                            width={34}
+                            height={34}
+                            className="w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] object-contain drop-shadow-md"
                         />
                     </button>
                 </nav>
 
                 {/* ── DESKTOP NAVBAR ── */}
-                <div className="hidden md:flex absolute top-0 left-0 w-full items-center justify-between px-8 lg:px-14 xl:px-20 py-6 lg:py-8 z-20">
-                    <Link href="/">
-                        <h1 className="text-2xl lg:text-3xl xl:text-4xl text-red-400 font-semibold tracking-wide font-serif">
-                            ELEVEN11 FILMS
-                        </h1>
+                <div className="hidden md:flex absolute top-0 left-0 w-full min-h-[100px] lg:min-h-[120px] xl:min-h-[130px] items-center justify-between gap-8 px-6 md:px-8 lg:px-12 xl:px-16 py-4 z-20">
+                    <Link href="/" className="flex items-center shrink-0 min-w-0">
+                        <Image
+                            src="/images/Eleven11Filmsred.png"
+                            alt="Eleven11 Films"
+                            width={450}
+                            height={110}
+                            className="h-[50px] lg:h-[55px] xl:h-[60px] w-auto max-w-[160px] lg:max-w-[190px] xl:max-w-[280px] object-contain drop-shadow-md"
+                            priority
+                        />
                     </Link>
-                    <nav className="flex items-center gap-5 lg:gap-8 xl:gap-10">
-                        {socialLinks.map((s) => (
-                            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                                className="hover:opacity-70 transition-opacity">
-                                <Image src={s.src} alt={s.label} width={22} height={22} className="lg:w-6 lg:h-6" />
+                    <nav className="flex items-center justify-end gap-4 lg:gap-6 xl:gap-8 shrink min-w-0">
+                        {/* {socialLinks.map((s) => (
+                            <a key={s.label}
+                                href={s.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={s.label}
+                                className="flex items-center justify-center shrink-0 hover:opacity-70 transition-opacity"
+                            >
+                                <Image
+                                    src={s.src}
+                                    alt={s.label}
+                                    width={30}
+                                    height={30}
+                                    className="w-[26px] h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[32px] xl:h-[32px] object-contain"
+                                />
                             </a>
-                        ))}
+                        ))} */}
                         <Link href="/contact"
-                            className="relative overflow-hidden rounded-full border-2 border-red-400 bg-red-400 text-white font-serif tracking-wide text-xs lg:text-sm px-4 lg:px-6 py-2 transition-colors duration-300 group">
-                            <span className="absolute inset-0 bg-[#7B1C2E] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full" />
-                            <span className="relative z-10 text-white">Create With Us</span>
+                            className="relative overflow-hidden rounded-full border-2 border-[#5b0625] text-white font-manrope tracking-wide text-xs lg:text-sm px-4 lg:px-5 xl:px-6 py-2 lg:py-2.5 whitespace-nowrap shrink-0 transition-colors duration-300 group">
+                            <span className="absolute inset-0 bg-[#5b0625]  translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full" />
+                            <span className="relative z-20 text-[#7B1C2E] group-hover:text-white transition-colors duration-300">GET IN TOUCH</span>
                         </Link>
                     </nav>
                 </div>
             </section>
 
-            {/* ── MOBILE MENU BACKDROP ── */}
-            <div
-                className={`fixed inset-0 z-40 bg-black/40 md:hidden transition-opacity duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                    }`}
-                onClick={() => setMenuOpen(false)}
-            />
-
-            {/* ── MOBILE MENU PANEL ── */}
-            <div
-                className={`fixed top-0 left-0 z-50 flex flex-col bg-white md:hidden transition-transform duration-300 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"
-                    }`}
-                style={{ width: "100vw", height: "50dvh" }}
-            >
-                {/* Top bar — logo + close */}
-                <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-gray-100 shrink-0">
-                    <Link href="/" onClick={() => setMenuOpen(false)}>
-                        <h1 className="text-base sm:text-lg text-red-400 font-semibold tracking-wide font-serif">
-                            ELEVEN11 FILMS
-                        </h1>
-                    </Link>
-                    <button
-                        onClick={() => setMenuOpen(false)}
-                        aria-label="Close menu"
-                        className="w-7 h-7 flex items-center justify-center"
-                    >
-                        <Image src="/images/cross.png" alt="Close menu" width={18} height={18} className="object-contain" />
-                    </button>
-                </div>
-
-                {/* Social links — centered */}
-                <div className="flex-1 flex flex-col items-center justify-center gap-4 sm:gap-5 px-4 overflow-y-auto">
-                    {socialLinks.map((s) => (
-                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                            className="flex items-center gap-3 hover:opacity-60 transition-opacity"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            <Image src={s.src} alt={s.label} width={18} height={18} className="shrink-0" />
-                            <span className="font-serif text-sm sm:text-base text-gray-800 tracking-wide w-28 sm:w-32">
-                                {s.label}
-                            </span>
-                        </a>
-                    ))}
-                </div>
-
-                {/* Get In Touch — pinned at bottom */}
-                <div className="shrink-0 px-4 sm:px-6 py-4 sm:py-5">
-                    <Link href="/contact" onClick={() => setMenuOpen(false)}
-                        className="block w-full bg-gray-900 text-white font-serif tracking-widest text-xs py-3 rounded-lg text-center hover:bg-gray-700 transition-colors duration-300">
-                        Get In Touch
-                    </Link>
-                </div>
-            </div>
+            {/* Mobile menu — shared component, consistent with Hero */}
+            <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
 
             {/* ── Address block ── */}
-            <section className="bg-[#f0ebe3] py-16 px-6 text-center">
-                <p className="text-gray-700 font-serif text-sm leading-8 max-w-2xl mx-auto font-semibold">
+            <section className="bg-[#f0ebe3] py-7 px-6 text-center">
+                <p className="text-gray-700 font-manrope text-sm leading-8 max-w-2xl mx-auto font-semibold">
                     Please fill in the form below and provide as much details as possible to help us create an accurate quote.<br />
                     We will try to get back within 48hrs — give us a call on the number below if you don't hear from us or if it's a last minute enquiry.<br />
-                    Please go through our FAQ section to find answers to some common questions.
                 </p>
-                <div className="mt-8 flex flex-col items-center gap-1 font-serif text-gray-800 text-sm font-semibold">
-                    <a href="mailto:hello@eleven11films.com" className="hover:text-red-400 transition-colors">
-                        hello@eleven11films.com
+                <div className="mt-3 flex flex-col items-center gap-1 font-manrope text-gray-800 text-sm font-semibold">
+                    <a href="mailto:eleven11films.in@gmail.com" className="hover: transition-colors">
+                        eleven11films.in@gmail.com
                     </a>
-                    <a href="tel:+919964787383" className="hover:text-red-400 transition-colors">
-                        +91 99647 87383
+                    <a href="tel:+91 9359101185" className="hover: transition-colors">
+                        +91 93591 01185
                     </a>
                 </div>
-                <div className="mt-6 text-gray-600 font-serif text-sm leading-7">
+                <div className="mt-3 text-gray-600 font-manrope text-sm leading-7">
                     <p className="font-semibold text-gray-800">Eleven11 Films Private Limited</p>
-                    <p>Site no 237, 2nd Floor</p>
-                    <p>Vidyagiri Layout, Nagarbhavi Circle</p>
-                    <p>Bengaluru, Karnataka — 560072</p>
+                    <p>Shop no 2, Parth Apartment</p>
+                    <p>Kala Kutir Rd, Dongarpada, Vartak Ward</p>
+                    <p>Virar West, Vasai-Virar, Maharashtra 401303</p>
                 </div>
             </section>
 
@@ -212,11 +210,11 @@ export default function ContactPage() {
                 {submitted ? (
                     <div className="flex flex-col items-center justify-center gap-6 py-20 text-center">
                         <p className="text-5xl">🎉</p>
-                        <h2 className="text-3xl font-serif text-gray-800 tracking-wide">Thank You!</h2>
-                        <p className="text-gray-500 text-base font-serif">
+                        <h2 className="text-3xl font-manrope text-gray-800 tracking-wide">Thank You!</h2>
+                        <p className="text-gray-500 text-base font-manrope">
                             We've received your enquiry and will get back to you within 48 hours.
                         </p>
-                        <Link href="/" className="mt-4 px-8 py-3 rounded-full border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 font-serif tracking-widest text-sm">
+                        <Link href="/" className="mt-4 px-8 py-3 rounded-full border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 font-manrope tracking-widest text-sm">
                             Back to Home
                         </Link>
                     </div>
@@ -230,7 +228,7 @@ export default function ContactPage() {
 
                                 {/* Name */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Name <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -243,7 +241,7 @@ export default function ContactPage() {
 
                                 {/* Email */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Email <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -256,7 +254,7 @@ export default function ContactPage() {
 
                                 {/* Phone */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Phone <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -269,7 +267,7 @@ export default function ContactPage() {
 
                                 {/* Estimated Guest Count */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Estimated Guest Count <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -282,7 +280,7 @@ export default function ContactPage() {
 
                                 {/* Tell us more */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Tell us more about your event — event flow, venues{" "}
                                         <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
@@ -296,7 +294,7 @@ export default function ContactPage() {
 
                                 {/* Location */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Location of the wedding <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -309,7 +307,7 @@ export default function ContactPage() {
 
                                 {/* Event Dates */}
                                 <div className="flex flex-col gap-1.5">
-                                    <label className="font-serif text-gray-900 font-semibold text-sm">
+                                    <label className="font-manrope text-gray-900 font-semibold text-sm">
                                         Event Date <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </label>
                                     <input
@@ -322,7 +320,7 @@ export default function ContactPage() {
 
                                 {/* Services checkboxes */}
                                 <div className="flex flex-col gap-3">
-                                    <span className="font-serif text-gray-900 font-semibold text-sm">
+                                    <span className="font-manrope text-gray-900 font-semibold text-sm">
                                         What services are you looking for?{" "}
                                         <span className="text-gray-400 font-normal text-xs">(required)</span>
                                     </span>
@@ -367,10 +365,11 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={sending}
-                                    className="mt-2 relative overflow-hidden rounded-full border-2 border-red-400 bg-red-400 text-white font-serif tracking-widest text-sm px-8 py-4 transition-colors duration-300 group disabled:opacity-60 disabled:cursor-not-allowed"
+                                    className="mt-2 relative overflow-hidden rounded-full border-2 border-[#5b0625] text-[#5b0625] font-manrope tracking-widest text-sm px-8 py-4 transition-colors duration-300 group disabled:opacity-60 disabled:cursor-not-allowed"
                                 >
-                                    <span className="absolute inset-0 bg-[#7B1C2E] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                    <span className="relative z-10">
+                                    <span className="absolute inset-0 bg-[#5b0625] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full" />
+
+                                    <span className="relative z-10 text-[#5b0625] group-hover:text-white transition-colors duration-300">
                                         {sending ? "SENDING…" : "SEND ENQUIRY"}
                                     </span>
                                 </button>

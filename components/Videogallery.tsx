@@ -275,14 +275,14 @@ export default function Videogallery() {
                     Here are a few of the celebrations we’ve had the privilege of being a part of.
                 </p>
                 <p className="text-gray-800  font-manrope text-[14px] leading-relaxed ">
-                    
+
                     Here are a few of the celebrations we’ve had the privilege of being a part of.
                 </p>
-                
+
             </div>
 
             {/* ── Responsive grid: 1 column on mobile, 2 on desktop ── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-10 md:gap-y-16 max-w-[1390px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-3 md:gap-y-3 max-w-[1390px] mx-auto">
                 {couples.map((couple) => (
                     <CoupleCard
                         key={couple.slug}
