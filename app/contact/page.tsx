@@ -118,7 +118,7 @@ export default function ContactPage() {
                 <nav className="flex md:hidden absolute top-0 left-0 w-full items-center justify-between px-4 sm:px-6 py-4 sm:py-5 z-20">
                     <Link href="/" className="flex items-center shrink-0">
                         <Image
-                            src="/images/Eleven11filmsred.png"
+                            src="/images/eleven11filmsred.png"
                             alt="Eleven11 Films"
                             width={390}
                             height={95}
