@@ -48,7 +48,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
 
                     <Link href="/" onClick={onClose} className="flex items-center shrink-0">
                         <Image
-                            src="/images/eleven11filmsred.png"
+                            src="/images/Eleven11Filmsred.png"
                             alt="Eleven11 Films"
                             width={290}
                             height={70}

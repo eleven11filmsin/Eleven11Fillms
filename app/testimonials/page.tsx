@@ -17,7 +17,7 @@ export default function TestimonialsPage() {
             <nav className="block md:hidden w-full bg-[#f0ebe3] flex items-center justify-between px-4 sm:px-6 py-4">
                 <Link href="/" className="flex items-center shrink-0">
                     <Image
-                        src="/images/eleven11filmsred.png"
+                        src="/images/Eleven11Filmsred.png"
                         alt="Eleven11 Films"
                         width={390}
                         height={95}
