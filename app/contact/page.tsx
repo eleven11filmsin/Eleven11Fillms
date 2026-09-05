@@ -185,11 +185,11 @@ export default function ContactPage() {
 
             {/* ── Address block ── */}
             <section className="bg-[#f0ebe3] py-7 px-6 text-center">
-                <p className="text-gray-700 font-manrope text-sm leading-8 max-w-2xl mx-auto font-semibold">
+                <p className="text-gray-700 font-manrope text-sm leading-6 max-w-2xl mx-auto font-semibold">
                     Please fill in the form below and provide as much details as possible to help us create an accurate quote.<br />
                     We will try to get back within 48hrs — give us a call on the number below if you don't hear from us or if it's a last minute enquiry.<br />
                 </p>
-                <div className="mt-3 flex flex-col items-center gap-1 font-manrope text-gray-800 text-sm font-semibold">
+                <div className="mt-2 flex flex-col items-center gap-1 font-manrope text-gray-800 text-sm font-semibold">
                     <a href="mailto:eleven11films.in@gmail.com" className="hover: transition-colors">
                         eleven11films.in@gmail.com
                     </a>
@@ -197,7 +197,7 @@ export default function ContactPage() {
                         +91 93591 01185
                     </a>
                 </div>
-                <div className="mt-3 text-gray-600 font-manrope text-sm leading-7">
+                <div className="mt-2 text-gray-600 font-manrope text-sm leading-5">
                     <p className="font-semibold text-gray-800">Eleven11 Films Private Limited</p>
                     <p>Shop no 2, Parth Apartment</p>
                     <p>Kala Kutir Rd, Dongarpada, Vartak Ward</p>
@@ -210,8 +210,8 @@ export default function ContactPage() {
                 {submitted ? (
                     <div className="flex flex-col items-center justify-center gap-6 py-20 text-center">
                         <p className="text-5xl">🎉</p>
-                        <h2 className="text-3xl font-manrope text-gray-800 tracking-wide">Thank You!</h2>
-                        <p className="text-gray-500 text-base font-manrope">
+                        <h2 className="text-3xl font-manrope text-[#5b0625] tracking-wide">Thank You!</h2>
+                        <p className="text-black text-base font-manrope">
                             We've received your enquiry and will get back to you within 48 hours.
                         </p>
                         <Link href="/" className="mt-4 px-8 py-3 rounded-full border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 font-manrope tracking-widest text-sm">

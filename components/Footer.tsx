@@ -3,12 +3,13 @@ import Image from "next/image";
 
 const services = [
     "Wedding Films",
-    "Wedding Photography",
+    "Candid Photography",
+    "Traditional Photography",
+    "Traditional Films",
     "Pre Wedding",
-    "Highlight Films",
-    "Teaser Films",
-    "Cinematic Videos",
-    "Reels / Short Films",
+    "Events",
+    "Reels & Short Films",
+    
 ];
 
 export default function Footer() {
@@ -63,7 +64,7 @@ export default function Footer() {
                             <p
                                 className="
                                     font-manrope
-                                    text-xs
+                                    text-sm
                                     sm:text-sm
                                     text-[#1a1a1a]
                                     leading-relaxed

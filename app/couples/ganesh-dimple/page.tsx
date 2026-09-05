@@ -216,7 +216,7 @@ export default function PriyaAndArjun() {
             {/* Couple Name + Credits */}
             <div className="flex flex-col items-center pt-12 sm:pt-16 md:pt-20 pb-10 gap-5 sm:gap-6 px-4">
                 <h1
-                    className="font-playfair text-gray-400 tracking-wide text-center"
+                    className="font-playfair text-[#5b0625] tracking-wide text-center"
                     style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }}
                 >
                     Ganesh &amp; Dimple

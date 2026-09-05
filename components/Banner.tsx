@@ -4,21 +4,21 @@ export default function Banner() {
     return (
         <section className="bg-[#f0ebe3] flex flex-col py-10 px-5 overflow-hidden">
             {/** ── MOBILE HEADING ── */}
-            <div className="md:hidden w-full flex flex-col items-center justify-center gap-3 -translate-y-2 mb-8 overflow-hidden">
+            <div className="md:hidden w-full flex flex-col items-center justify-center gap-3 -translate-y-2 mb-8 overflow-visible">
 
                 {/* First line */}
-                <h2 className="font-coral-blush-serif  text-gray-900 uppercase text-[5.2vw] leading-none tracking-[0.05em] whitespace-nowrap">
+                <h2 className="font-coral-blush-serif  text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] whitespace-nowrap">
                     Your Story, Your Way
                 </h2>
 
                 {/* Second line */}
                 <div className="flex items-center justify-center w-full -mt-0.5 whitespace-nowrap">
 
-                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.6vw] leading-none tracking-normal translate-y-0.5 -translate-x-2">
+                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.2vw] leading-none tracking-normal translate-y-0.5 -translate-x-2">
                         nothing about it should
                     </span>
 
-                    <span className="font-coral-blush-serif text-gray-900 uppercase text-[5.2vw] leading-none tracking-[0.05em] ml-1">
+                    <span className="font-coral-blush-serif text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] ml-1">
                         Feel Ordinary
                     </span>
 
@@ -27,15 +27,15 @@ export default function Banner() {
             </div>
 
             {/* ── DESKTOP HEADING ── */}
-            <div className="hidden md:flex relative z-20 gap-3 flex-col items-center justify-center leading-tight mb-8 w-full overflow-hidden md:items-center md:mb-6 md:relative md:top-34 md:right-18 -translate-y-2">
+            <div className="hidden md:flex relative z-20 gap-3 flex-col items-center justify-center leading-tight mb-8 w-full overflow-visible md:items-center md:mb-6 md:relative md:top-34 md:right-18 -translate-y-2">
                 {/* First line  */}
-                <h2 className="font-coral-blush-serif text-gray-900 uppercase tracking-[0.05em] text-[5.2vw] leading-[1.05] whitespace-nowrap md:text-4xl md:tracking-widest">
+                <h2 className="font-coral-blush-serif text-gray-900 uppercase tracking-[0.05em] text-[9.2vw] leading-[1.05] whitespace-nowrap md:text-4xl md:tracking-widest">
                     Your Story, Your Way
                 </h2>
 
                 {/* Second line — stays on one line on mobile */}
-                <h2 className="font-coral-blush-serif text-gray-900 uppercase gap-1 tracking-[0.05em] text-[5.2vw] leading-[1.05] flex flex-nowrap items-center -mt-1 whitespace-nowrap md:text-4xl md:tracking-widest">
-                    <span className="italic font-SnellRoundhandRegular font-normal text-[4.6vw] normal-case mr-2 -translate-x-4 mt-1 tracking-normal md:text-4xl md:mr-0 md:mt-2">
+                <h2 className="font-coral-blush-serif text-gray-900 uppercase gap-1 tracking-[0.05em] text-[14vw] leading-[1.25] flex flex-nowrap items-center -mt-1 whitespace-nowrap md:text-4xl md:tracking-widest">
+                    <span className="italic font-SnellRoundhandRegular font-normal text-[10vw] normal-case mr-2 -translate-x-5 mt-1 tracking-normal md:text-4xl md:mr-0 md:mt-2">
                         nothing about it should
                     </span>
                     Feel Ordinary

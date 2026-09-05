@@ -11,6 +11,12 @@ declare global {
 
 const testimonials = [
     {
+        youtubeId: "hu5YhiBzDJA",
+        quote: "From our very first shoot, we felt completely comfortable and guided like friends. The dedication and trust you showed in capturing our emotions made the entire experience unforgettable.",
+        name: "Ganesh & Dimple",
+        role: "Couple",
+    },
+    {
         youtubeId: "awn-LTZVRhs",
         quote: "The entire team was friendly, professional and made every moment feel effortless. Your preparation, punctuality and guidance made the experience truly enjoyable, and we’d genuinely recommend Eleven11Films.",
         name: "Parag & Gauri",
@@ -22,12 +28,7 @@ const testimonials = [
         name: "Sunny & Asmita",
         role: "Couple",
     },
-    {
-        youtubeId: "hu5YhiBzDJA",
-        quote: "From our very first shoot, we felt completely comfortable and guided like friends. The dedication and trust you showed in capturing our emotions made the entire experience unforgettable.",
-        name: "Ganesh & Dimple",
-        role: "Couple",
-    },
+    
 ];
 
 /**
