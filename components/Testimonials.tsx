@@ -17,15 +17,15 @@ const testimonials = [
         role: "Couple",
     },
     {
-        youtubeId: "awn-LTZVRhs",
-        quote: "The entire team was friendly, professional and made every moment feel effortless. Your preparation, punctuality and guidance made the experience truly enjoyable, and we’d genuinely recommend Eleven11Films.",
-        name: "Parag & Gauri",
-        role: "Couple",
-    },
-    {
         youtubeId: "kzErK8yogJo",
         quote: "As a former photographer, I truly appreciate how calm, patient and creative the Eleven11Films team is. Your professionalism, energy and speed made the entire experience effortless.",
         name: "Sunny & Asmita",
+        role: "Couple",
+    },
+    {
+        youtubeId: "awn-LTZVRhs",
+        quote: "The entire team was friendly, professional and made every moment feel effortless. Your preparation, punctuality and guidance made the experience truly enjoyable, and we’d genuinely recommend Eleven11Films.",
+        name: "Parag & Gauri",
         role: "Couple",
     },
     
