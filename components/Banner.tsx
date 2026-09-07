@@ -4,21 +4,22 @@ export default function Banner() {
     return (
         <section className="bg-[#f0ebe3] flex flex-col py-10 px-5 overflow-hidden">
             {/** ── MOBILE HEADING ── */}
+            {/* ── MOBILE HEADING ── */}
             <div className="md:hidden w-full flex flex-col items-center justify-center gap-3 -translate-y-2 mb-8 overflow-visible">
 
                 {/* First line */}
-                <h2 className="font-coral-blush-serif  text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] whitespace-nowrap">
+                <h2 className="font-coral-blush-serif text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] whitespace-nowrap">
                     Your Story, Your Way
                 </h2>
 
                 {/* Second line */}
-                <div className="flex items-center justify-center w-full -mt-0.5 whitespace-nowrap">
+                <div className="flex items-baseline justify-center whitespace-nowrap leading-none gap-1.5">
 
-                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.8vw] leading-none tracking-normal  -translate-x-1.5">
+                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[clamp(14px,4vw,18px)] scale-y-[1.15] scale-x-[1.15]leading-none">
                         nothing about it should
                     </span>
 
-                    <span className="font-coral-blush-serif text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] ml-1">
+                    <span className="font-coral-blush-serif text-gray-900 uppercase text-[clamp(14px,4vw,18px)] leading-none tracking-[0.03em] ml-1">
                         Feel Ordinary
                     </span>
 

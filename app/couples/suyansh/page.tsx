@@ -160,11 +160,11 @@ export default function KiaraAndSiddharth() {
                     className="w-10 h-10 flex items-center justify-center shrink-0"
                 >
                     <Image
-                        src="/images/menu.png"
+                        src="/images/menu1.png"
                         alt="Open menu"
-                        width={34}
-                        height={34}
-                        className="w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] object-contain"
+                        width={42}
+                        height={42}
+                        className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] object-contain"
                     />
                 </button>
             </nav>

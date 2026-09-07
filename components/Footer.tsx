@@ -65,6 +65,7 @@ export default function Footer() {
                                 className="
                                     font-manrope
                                     text-sm
+                                    italic
                                     sm:text-sm
                                     text-[#1a1a1a]
                                     leading-relaxed

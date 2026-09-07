@@ -46,13 +46,13 @@ export default function CouplesGrid() {
                                 />
                             </div>
                         </Link>
-                        <div className="flex flex-col gap-0.5">
+                        <div className="flex flex-col gap-0.2">
                             <Link href={`/couples/${couple.slug}`}>
                                 <p className="text-gray-900 font-bold text-[20px] font-playfair hover:text-[#5b0625] transition-colors cursor-pointer">
                                     {couple.name}
                                 </p>
                             </Link>
-                            <p className="text-gray-500 text-[12px] font-manrope">{couple.qoute}</p>
+                            <p className="text-gray-500 text-[12px] font-manrope">"{couple.qoute}"</p>
                         </div>
                     </div>
                 ))}
@@ -78,7 +78,7 @@ export default function CouplesGrid() {
                                     {couple.name}
                                 </p>
                             </Link>
-                            <p className="text-gray-500 text-[12px] font-manrope">{couple.qoute}</p>
+                            <p className="text-gray-500 text-[12px] font-manrope">"{couple.qoute}"</p>
                         </div>
                     </div>
                 ))}
