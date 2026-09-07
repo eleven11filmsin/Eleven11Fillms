@@ -5,25 +5,25 @@ const couples = [
     {
         image: "/images/pratiksha/2.jpg",
         name: "Pratiksha",
-        date: "Oct 7, 2024",
+        qoute: "Effortlessly beautiful from every angle",
         slug: "pratiksha",
     },
     {
         image: "/images/ganeshdimple/13.jpg",
         name: "Ganesh & Dimple",
-        date: "Aug 25, 2024",
+        qoute: "Eleven years down, forever to go",
         slug: "ganesh-dimple",
     },
     {
         image: "/images/tejalmanish/6.jpg",
         name: "Tejal & Manish",
-        date: "Aug 8, 2024",
+        qoute: "They bring out the best in each other",
         slug: "tejalmanish",
     },
     {
         image: "/images/suyansh/2.JPG",
         name: "Suyansh",
-        date: "Apr 24, 2024",
+        qoute: "Little moments that matter most",
         slug: "suyansh",
     },
 ];
@@ -52,7 +52,7 @@ export default function CouplesGrid() {
                                     {couple.name}
                                 </p>
                             </Link>
-                            <p className="text-gray-500 text-[12px] font-manrope">{couple.date}</p>
+                            <p className="text-gray-500 text-[12px] font-manrope">{couple.qoute}</p>
                         </div>
                     </div>
                 ))}
@@ -78,7 +78,7 @@ export default function CouplesGrid() {
                                     {couple.name}
                                 </p>
                             </Link>
-                            <p className="text-gray-500 text-[12px] font-manrope">{couple.date}</p>
+                            <p className="text-gray-500 text-[12px] font-manrope">{couple.qoute}</p>
                         </div>
                     </div>
                 ))}

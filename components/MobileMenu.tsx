@@ -38,7 +38,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                         className="absolute left-5 w-8 h-8 flex items-center justify-center shrink-0"
                     >
                         <Image
-                            src="/images/cross.png"
+                            src="/images/close.png"
                             alt="Close menu"
                             width={22}
                             height={22}
@@ -64,7 +64,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                             key={item.label}
                             href={item.href}
                             onClick={onClose}
-                            className="font-manrope font-medium text-2xl sm:text-3xl text-gray-900 tracking-wide hover:opacity-60 transition-opacity"
+                            className="font-manrope font-semibold text-2xl sm:text-3xl text-gray-900 tracking-wide hover:opacity-60 transition-opacity"
                         >
                             {item.label}
                         </Link>

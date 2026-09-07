@@ -14,7 +14,7 @@ export default function Banner() {
                 {/* Second line */}
                 <div className="flex items-center justify-center w-full -mt-0.5 whitespace-nowrap">
 
-                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.2vw] leading-none tracking-normal translate-y-0.5 -translate-x-2">
+                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.8vw] leading-none tracking-normal  -translate-x-2">
                         nothing about it should
                     </span>
 
@@ -34,7 +34,7 @@ export default function Banner() {
                 </h2>
 
                 {/* Second line — stays on one line on mobile */}
-                <h2 className="font-coral-blush-serif text-gray-900 uppercase gap-1 tracking-[0.05em] text-[14vw] leading-[1.25] flex flex-nowrap items-center -mt-1 whitespace-nowrap md:text-4xl md:tracking-widest">
+                <h2 className="font-coral-blush-serif text-gray-900 uppercase gap-1 tracking-[0.05em] text-[10vw] leading-[1.25] flex flex-nowrap items-center -mt-1 whitespace-nowrap md:text-4xl md:tracking-widest">
                     <span className="italic font-SnellRoundhandRegular font-normal text-[10vw] normal-case mr-2 -translate-x-5 mt-1 tracking-normal md:text-4xl md:mr-0 md:mt-2">
                         nothing about it should
                     </span>
