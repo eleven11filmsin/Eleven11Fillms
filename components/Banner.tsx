@@ -14,7 +14,7 @@ export default function Banner() {
                 {/* Second line */}
                 <div className="flex items-center justify-center w-full -mt-0.5 whitespace-nowrap">
 
-                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.8vw] leading-none tracking-normal  -translate-x-2">
+                    <span className="font-SnellRoundhandRegular italic font-normal text-gray-900 normal-case text-[4.8vw] leading-none tracking-normal  -translate-x-1.5">
                         nothing about it should
                     </span>
 
