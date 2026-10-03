@@ -126,7 +126,7 @@ export default function MediaDock() {
     return (
         <>
             {/* Single source of truth for playback — one <audio> element, reused on toggle */}
-            <audio ref={audioRef} src="/audio/heromain.mp3" loop preload="auto" />
+            <audio ref={audioRef} src="/audio/heroaudio.mpeg" loop preload="auto" />
             <Dock
                 items={items}
                 panelHeight={isMobile ? 46 : 65}
