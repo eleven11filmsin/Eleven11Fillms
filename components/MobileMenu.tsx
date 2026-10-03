@@ -64,7 +64,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                             key={item.label}
                             href={item.href}
                             onClick={onClose}
-                            className="font-manrope font-semibold text-2xl sm:text-3xl text-gray-900 tracking-wide hover:opacity-60 transition-opacity"
+                            className="font-manrope font-regular text-2xl sm:text-3xl text-gray-900 tracking-wide hover:opacity-60 transition-opacity"
                         >
                             {item.label}
                         </Link>

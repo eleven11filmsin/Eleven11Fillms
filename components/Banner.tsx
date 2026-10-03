@@ -5,7 +5,7 @@ export default function Banner() {
         <section className="bg-[#f0ebe3] flex flex-col py-10 px-5 overflow-hidden">
             {/** ── MOBILE HEADING ── */}
             {/* ── MOBILE HEADING ── */}
-            <div className="md:hidden w-full flex flex-col items-center justify-center gap-3 -translate-y-2 mb-8 overflow-visible">
+            <div className="md:hidden w-full flex flex-col items-center justify-center gap-1 -translate-y-2 mb-8 overflow-visible">
 
                 {/* First line */}
                 <h2 className="font-coral-blush-serif text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] whitespace-nowrap">
@@ -28,7 +28,7 @@ export default function Banner() {
             </div>
 
             {/* ── DESKTOP HEADING ── */}
-            <div className="hidden md:flex relative z-20 gap-3 flex-col items-center justify-center leading-tight mb-8 w-full overflow-visible md:items-center md:mb-6 md:relative md:top-34 md:right-18 -translate-y-2">
+            <div className="hidden md:flex relative z-20 flex-col items-center justify-center leading-tight mb-8 w-full overflow-visible md:items-center md:mb-6 md:relative md:top-34 md:right-18 -translate-y-2">
                 {/* First line  */}
                 <h2 className="font-coral-blush-serif text-gray-900 uppercase tracking-[0.05em] text-[9.2vw] leading-[1.05] whitespace-nowrap md:text-4xl md:tracking-widest">
                     Your Story, Your Way

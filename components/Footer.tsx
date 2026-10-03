@@ -9,7 +9,7 @@ const services = [
     "Pre Wedding",
     "Events",
     "Reels & Short Films",
-    
+
 ];
 
 export default function Footer() {

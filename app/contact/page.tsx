@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
@@ -26,6 +26,9 @@ const socialLinks = [
 
 export default function ContactPage() {
     const formRef = useRef<HTMLFormElement>(null);
+    const videoSectionRef = useRef<HTMLElement>(null);
+    const desktopVideoRef = useRef<HTMLVideoElement>(null);
+    const mobileVideoRef = useRef<HTMLVideoElement>(null);
 
     const [submitted, setSubmitted] = useState(false);
     const [sending, setSending] = useState(false);
@@ -34,6 +37,52 @@ export default function ContactPage() {
     const [services, setServices] = useState<string[]>([]);
     const [servicesError, setServicesError] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    // Responsive screen detection to prevent downloading both desktop & mobile videos
+    const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+
+    // Viewport-based lazy loading so video only loads when relevant
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
+    useEffect(() => {
+        const mql = window.matchMedia("(min-width: 768px)");
+        setIsDesktop(mql.matches);
+
+        const handler = (e: MediaQueryListEvent) => {
+            setIsDesktop(e.matches);
+        };
+
+        mql.addEventListener("change", handler);
+        return () => mql.removeEventListener("change", handler);
+    }, []);
+
+    useEffect(() => {
+        const element = videoSectionRef.current;
+        if (!element) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShouldLoadVideo(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" }
+        );
+
+        observer.observe(element);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!shouldLoadVideo) return;
+
+        if (isDesktop === true && desktopVideoRef.current) {
+            desktopVideoRef.current.play().catch(() => {});
+        } else if (isDesktop === false && mobileVideoRef.current) {
+            mobileVideoRef.current.play().catch(() => {});
+        }
+    }, [shouldLoadVideo, isDesktop]);
 
     function toggleService(service: string) {
         setServices(prev => {
@@ -88,30 +137,36 @@ export default function ContactPage() {
         <main className="min-h-screen bg-[#f0ebe3] flex flex-col">
 
             {/* ── HERO with nav overlay ── */}
-            <section className="relative w-full h-auto md:h-[100svh] overflow-hidden">
+            <section ref={videoSectionRef} className="relative w-full h-auto md:h-[100svh] overflow-hidden">
 
                 {/* ── MOBILE HERO VIDEO (4:5, top-aligned, uncropped) ── */}
                 <video
+                    ref={mobileVideoRef}
                     className="md:hidden block  w-full h-auto"
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload={shouldLoadVideo && isDesktop === false ? "auto" : "none"}
                 >
-                    <source src="/videos/getintouchmobile.mp4" type="video/mp4" />
+                    {shouldLoadVideo && isDesktop === false && (
+                        <source src="/videos/getintouchmobile.mp4" type="video/mp4" />
+                    )}
                 </video>
 
                 {/* ── DESKTOP / TABLET HERO VIDEO (covers hero area) ── */}
                 <video
+                    ref={desktopVideoRef}
                     className="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload={shouldLoadVideo && isDesktop === true ? "auto" : "none"}
                 >
-                    <source src="/videos/getintouch.mp4" type="video/mp4" />
+                    {shouldLoadVideo && isDesktop === true && (
+                        <source src="/videos/getintouch.mp4" type="video/mp4" />
+                    )}
                 </video>
 
                 {/* ── MOBILE NAVBAR ── */}

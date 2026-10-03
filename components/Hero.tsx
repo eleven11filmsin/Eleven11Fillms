@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import MobileMenu from "@/components/MobileMenu";
 import MediaDock from "@/components/MediaDock";
 
@@ -26,6 +26,29 @@ const socialLinks = [
 
 export default function Hero() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+    const desktopVideoRef = useRef<HTMLVideoElement>(null);
+    const mobileVideoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const mql = window.matchMedia("(min-width: 768px)");
+        setIsDesktop(mql.matches);
+
+        const handler = (e: MediaQueryListEvent) => {
+            setIsDesktop(e.matches);
+        };
+
+        mql.addEventListener("change", handler);
+        return () => mql.removeEventListener("change", handler);
+    }, []);
+
+    useEffect(() => {
+        if (isDesktop === true && desktopVideoRef.current) {
+            desktopVideoRef.current.play().catch(() => { });
+        } else if (isDesktop === false && mobileVideoRef.current) {
+            mobileVideoRef.current.play().catch(() => { });
+        }
+    }, [isDesktop]);
 
     return (
         <>
@@ -40,14 +63,17 @@ export default function Hero() {
                 ================================================== */}
                 <div className="relative block md:hidden w-full aspect-[4/5] overflow-hidden">
                     <video
+                        ref={mobileVideoRef}
                         autoPlay
                         muted
                         loop
                         playsInline
-                        preload="auto"
+                        preload={isDesktop === false ? "auto" : "none"}
                         className="absolute top-0 left-0 w-full h-full object-cover"
                     >
-                        <source src="/videos/mobilehero.mp4" type="video/mp4" />
+                        {isDesktop === false && (
+                            <source src="/videos/mobilehero.mp4" type="video/mp4" />
+                        )}
                     </video>
 
                     {/* Mobile Navbar overlays video */}
@@ -71,9 +97,9 @@ export default function Hero() {
                             <Image
                                 src="/images/menu1.png"
                                 alt="Open menu"
-                                width={42}
-                                height={42}
-                                className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] object-contain drop-shadow-md"
+                                width={32}
+                                height={32}
+                                className="w-[32px] h-[32px] sm:w-[32px] sm:h-[32px] object-contain drop-shadow-md"
                             />
                         </button>
                     </nav>
@@ -84,14 +110,17 @@ export default function Hero() {
                 ================================================== */}
                 <div className="hidden md:block relative w-full h-screen overflow-hidden">
                     <video
+                        ref={desktopVideoRef}
                         autoPlay
                         muted
                         loop
                         playsInline
-                        preload="auto"
+                        preload={isDesktop === true ? "auto" : "none"}
                         className="absolute inset-0 w-full h-full object-cover object-center z-0"
                     >
-                        <source src="/videos/hero.mp4" type="video/mp4" />
+                        {isDesktop === true && (
+                            <source src="/videos/hero.mp4" type="video/mp4" />
+                        )}
                     </video>
 
                     {/* Desktop Navbar */}
