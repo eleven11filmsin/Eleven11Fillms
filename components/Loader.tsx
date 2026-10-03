@@ -59,7 +59,7 @@ export default function Loader({ onComplete }: LoaderProps) {
     return (
         <div
             onClick={handleFinish}
-            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black overflow-hidden transition-opacity duration-[1500ms] ease-in-out cursor-pointer ${isFinished ? "opacity-0 pointer-events-none" : "opacity-100"
+            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black overflow-hidden transition-opacity duration-[2000ms] ease-in-out cursor-pointer ${isFinished ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
             aria-hidden={isFinished}
         >
