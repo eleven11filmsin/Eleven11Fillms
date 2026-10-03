@@ -95,7 +95,7 @@ export default function Hero() {
                             className="w-10 h-10 flex items-center justify-center shrink-0"
                         >
                             <Image
-                                src="/images/menu1.png"
+                                src="/images/menu2.png"
                                 alt="Open menu"
                                 width={32}
                                 height={32}

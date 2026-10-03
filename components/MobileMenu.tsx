@@ -40,9 +40,9 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                         <Image
                             src="/images/close.png"
                             alt="Close menu"
-                            width={22}
-                            height={22}
-                            className="w-[40px] h-[40px] object-contain"
+                            width={30}
+                            height={30}
+                            className="w-[30px] h-[30px] object-contain"
                         />
                     </button>
 

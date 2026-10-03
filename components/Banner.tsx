@@ -5,7 +5,7 @@ export default function Banner() {
         <section className="bg-[#f0ebe3] flex flex-col py-10 px-5 overflow-hidden">
             {/** ── MOBILE HEADING ── */}
             {/* ── MOBILE HEADING ── */}
-            <div className="md:hidden w-full flex flex-col items-center justify-center gap-1 -translate-y-2 mb-8 overflow-visible">
+            <div className="md:hidden w-full flex flex-col items-center justify-center -translate-y-2 mb-8 overflow-visible">
 
                 {/* First line */}
                 <h2 className="font-coral-blush-serif text-gray-900 uppercase text-[4.8vw] leading-none tracking-[0.05em] whitespace-nowrap">

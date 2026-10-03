@@ -162,9 +162,9 @@ export default function tejalmanish() {
                     <Image
                         src="/images/menu1.png"
                         alt="Open menu"
-                        width={42}
-                        height={42}
-                        className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] object-contain"
+                        width={34}
+                        height={34}
+                        className="w-[34px] h-[34px] sm:w-[34px] sm:h-[34px] object-contain"
                     />
                 </button>
             </nav>
